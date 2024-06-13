@@ -1,0 +1,8 @@
+<launch>
+  <!-- Launch Gazebo with the pick_drop.world -->
+  <param name="use_sim_time" value="true"/>
+  <arg name="world_file" default="$(find robot_arm_urdf)/world/pick_drop1.world"/>
+
+  <node name="gazebo" pkg="gazebo_ros" type="gazebo" respawn="false" output="screen" args="$(arg world_file)"/>
+</launch>
+

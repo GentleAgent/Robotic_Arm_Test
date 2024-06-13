@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="red_block">
+
+  <!-- Define the link for the red block -->
+  <link name="block_link">
+    <visual>
+      <geometry>
+        <box size="0.3 0.1 0.05"/> <!-- Adjust the size as needed -->
+      </geometry>
+      <material name="red"> <!-- Define material properties -->
+        <color rgba="1 0 0 1"/> <!-- Red color -->
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.3 0.1 0.05"/> <!-- Adjust collision geometry if needed -->
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Include block in Gazebo -->
+  <gazebo reference="block_link">
+    <pose>1 1 1 0 0 0</pose> <!-- Adjust spawn pose as needed -->
+  </gazebo>
+
+</robot>
+
